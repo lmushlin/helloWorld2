@@ -6,17 +6,28 @@ h1 {font-family: sans-serif, cursive; color: #ffffff; text-align: center} /* Rul
 h1 {text-shadow: -1px -1px 0 #cc00cc, 1px -1px 0 #cc00cc, -1px 1px 0 #cc00cc, 1px 1px 0 #cc00cc} /* Outlines the header magenta color */ /* Rule 2 */
 
 #my-name {color: #cc00cc; font-family: sans-serif; width: 350px; text-align: center;}
-#my-name {background-color: #ffffff; font-size: 18px}
+#my-name {background-color: #7194da; font-size: 18px}
+#my-name {width: fit-content; margin-left: auto; margin-right: auto; text-align: left}
+#my-name {text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff}
 
-h2 {text-align: left; text-decoration: underline} /* Rule 1 */
+
+h2 {text-align: center; text-decoration: underline} /* Rule 1 */
 h2 {font-family: cursive; color: #cc00cc} /* Rule 2 */
 
-p {border: 2px dotted #cc00cc; border-radius: 5px; padding: 5px;} /* Rule 1 */
+p {border: 2px dotted #cc00cc; border-radius: 5px; padding: 5px; width: fit-content; text-align: left} /* Rule 1 */
 p {background-color: #ffffff; font-family: sans-serif; color: #7194da} /* Rule 2 */
 
-.sports {background-color: #ffffff; text-decoration: underline; text-decoration-color: #cc00cc; font-weight: bold} /* This is the class attribute rule block for my sports. */
-.music {background-color: #ffffff; text-decoration: underline; text-decoration-color: #cc00cc; font-weight: bold} /* This is the class attribute rule block for my music. */
+.sports { text-decoration: underline; text-decoration-color: #cc00cc; font-weight: bold; text-align: center;
+    text-shadow: -0.5px -0.5px 0 #cc00cc, 0.5px -0.5px 0 #cc00cc, -0.5px 0.5px 0 #cc00cc, 0.5px 0.5px 0 #cc00cc} /* This is the class attribute rule block for my sports. */
+.music { text-decoration: underline; text-decoration-color: #cc00cc; font-weight: bold; text-align: center;
+    text-shadow: -0.5px -0.5px 0 #cc00cc, 0.5px -0.5px 0 #cc00cc, -0.5px 0.5px 0 #cc00cc, 0.5px 0.5px 0 #cc00cc} /* This is the class attribute rule block for my music. */
+.course_header { text-decoration: underline; text-decoration-color: #cc00cc; font-weight: bold; text-align: center;
+    text-shadow: -0.5px -0.5px 0 #cc00cc, 0.5px -0.5px 0 #cc00cc, -0.5px 0.5px 0 #cc00cc, 0.5px 0.5px 0 #cc00cc}
 
-table, td, th {border-style: solid; border-width: 1px; border-color: #cc00cc}
+table, td, th {border-style: solid; border-width: 2px; border-radius: 0.5px; border-color: #cc00cc; border-collapse: collapse}
+
+table {margin-left: auto; margin-right: auto}
+
+ol, ul {width: fit-content; margin-left: auto; margin-right: auto; text-align: left}
 
 img.logo {width: 450px; height: 150px}
