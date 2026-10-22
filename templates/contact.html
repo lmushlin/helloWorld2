@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+    <h1>Contact Me</h1>
+
+    {% if form_submitted %}
+        <!-- Displayed ONLY after form submission (POST) -->
+        <div class="alert alert-success mt-4" role="alert">
+            <h4 class="alert-heading">Thank you for your submission, {{ first_name }}!</h4>
+            <p>We have received your information as follows:</p>
+            <ul>
+                <li><strong>First Name:</strong> {{ first_name }}</li>
+                <li><strong>Last Name:</strong> {{ last_name }}</li>
+                <li><strong>Email Address:</strong> {{ email }}</li>
+                <li><strong>Comments:</strong> {{ comments }}</li>
+            </ul>
+            <hr>
+            <!-- Link/Button to complete the form again -->
+            <a href="/contact" class="btn btn-outline-success">Complete form again</a>
+        </div>
+    {% else %}
+        <!-- Displayed on initial page visit or when clicking 'Complete form again' (GET) -->
+        <form action="/contact" method="POST">
+            <div class="mb-3">
+                <label for="first_name" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="comments" class="form-label">Comments</label>
+                <textarea class="form-control" id="comments" name="comments" rows="3" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    {% endif %}
+{% endblock %}
