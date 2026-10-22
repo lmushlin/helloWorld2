@@ -1,11 +1,8 @@
-<!DOCTYPE html> <!--This is the document type, html, which is at the top of every doc to determine what type of doc it is. -->
-<html lang="en"> <!--This is the language the html file is in. It is english. -->
-<head>
-    <meta charset="UTF-8">
-    <title>About Lily Mushlin!</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}About Lily Mushlin!{% endblock %}
+
+{% block content %}
     <h1><strong>Howdyy there!</strong></h1>
     <p id="my-name">Welcome to my page, I am Lily Mushlin!</p>
     <h2><strong>My Background:</strong></h2>
@@ -34,29 +31,32 @@
 
     <h2>Courses:</h2>
     <h3 class="course_header">Undergraduate Courses I am currently taking:</h3>
-    <table>
-        <tr>
-            <th>Course</th>
-            <th>Semester Taken</th>
-        </tr>
-        <tr>
-            <th>BMGT407</th>
-            <th>Fall 2026</th>
-        </tr>
-        <tr>
-            <th>BMGT363</th>
-            <th>Fall 2026</th>
-        </tr>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Semester Taken</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BMGT407</td>
+                <td>Fall 2026</td>
+            </tr>
+            <tr>
+                <td>BMGT363</td>
+                <td>Fall 2026</td>
+            </tr>
+        </tbody>
     </table>
 
     <h2>Links:</h2>
     <!--These are links to websites that open a separate browser -->
-    <p>This is a link to <a href="https://pythonanywhere.com/hello" target="_blank">my very first HTML!</a></p>
+    <p>This is a link to <a href="https://lmushlin.pythonanywhere.com/hello" target="_blank">my very first HTML!</a></p>
     <p>This is a link to <a href="https://netflix.com/browse" target="_blank">Netflix, where I watch shows and movies sometimes :)</a></p>
-    <p>This is a link to<a href="https://boredbutton.com" target="_blank">a website for if you are <em>extremely</em> bored, and desperate enough, you can click a button and play games you normally would not!</a></p>
+    <p>This is a link to <a href="https://boredbutton.com" target="_blank">a website for if you are <em>extremely</em> bored, and desperate enough, you can click a button and play games you normally would not!</a></p>
 
     <h2>University Logo:</h2>
     <p>Here is a picture of the Smith Logo for my School.</p>
     <img src="https://terpconnect.umd.edu/~jbono/bmgt407/images/smith-logo.png" class="logo" alt="Smith Logo">
-</body>
-</html>
+{% endblock %}
