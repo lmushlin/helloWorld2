@@ -24,13 +24,13 @@
 {% block page_content %}
 
 <form class="row g-3"
-      action="{{ url_for('student_edit', student_id=student['student_id']) if student else url_for('student_create') }}"
-      method="post" xmlns="http://www.w3.org/1999/xhtml">
+  action="{{ url_for('student_edit', student_id=student['student_id']) if student else url_for('student_create') }}"
+  method="post" xmlns="http://www.w3.org/1999/xhtml">
 
   <div class="col-md-4">
     <label for="first_name" class="form-label"><strong>First Name</strong></label>
     {% if action and action in ['create', 'update'] %}
-    <input type="text" class="form-control" id="first_name" name="first_name" value="{{ student['first_name'] if student else '' }}" required>
+        <input type="text" class="form-control" id="first_name" name="first_name" value="{{ student['first_name'] if student else '' }}" required>
     {% else %}
         <br>{{ student['first_name'] }}
     {% endif %}
@@ -107,7 +107,7 @@
     <div class="form-check">
 
       <input class="form-check-input" type="checkbox" value="" id="is_honors" name="is_honors">
-              {{ 'checked' if student and student['is_honors'] == True else '' }}>
+              {{ 'checked' if student and student['is_honors'] == True else '' }}
         {% endif %}
       <label class="form-check-label" for="is_honors">
           <strong>Is this an honors student?</strong>
@@ -115,10 +115,9 @@
             <br>{{ 'Yes' if student and student['is_honors'] == True else 'No' }}
             {% endif %}
       </label>
+    </div>
   </div>
 
-
-  </div>
   <div class="col-12 text-center">
     {% if action and action in ['create', 'update'] %}
     <button class="btn btn-primary" type="submit">{{ 'Add' if action=='create' else 'Update' }} Student</button>
