@@ -25,7 +25,7 @@
 
 <form class="row g-3"
       action="{{ url_for('student_edit', student_id=student['student_id']) if student else url_for('student_create') }}"
-      method="post" xmlns="http://www.w3.org/1999/html">
+      method="post" xmlns="http://www.w3.org/1999/xhtml">
 
   <div class="col-md-4">
     <label for="first_name" class="form-label"><strong>First Name</strong></label>
@@ -70,7 +70,7 @@
     <select name="major_id" id="major_id" class="form-select form-select-md" aria-label=".form-select-md example">
         <option value="0">---Select A Major---</option>
         {% for each_major in majors %}
-        <option value="{{ each_major['major_id'] }}"
+        <option value="{{ each_major['major_id'] }}">
                 {{ 'selected' if student and each_major['major_id'] == student['major_id'] else ''}}>{{ each_major['major'] }}</option>
         {% endfor %}
     </select>
@@ -106,7 +106,7 @@
         {% if action and action in ['create', 'update'] %}
     <div class="form-check">
 
-      <input class="form-check-input" type="checkbox" value="" id="is_honors" name="is_honors"
+      <input class="form-check-input" type="checkbox" value="" id="is_honors" name="is_honors">
               {{ 'checked' if student and student['is_honors'] == True else '' }}>
         {% endif %}
       <label class="form-check-label" for="is_honors">
