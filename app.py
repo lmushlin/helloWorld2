@@ -223,7 +223,7 @@ def page_not_found(e):
 @login_required
 @role_required(['ADMIN', 'MANAGER'])
 def training():
-    return render_template(training.html)
+    return render_template('training.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
